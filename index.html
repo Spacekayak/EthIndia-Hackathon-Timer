@@ -9,6 +9,19 @@
             src: url('./Fragile.otf');
         }
 
+        @font-face {
+            font-family: 'Circular-Medium';
+            src: url('./CircularStd-Medium.otf');
+        }
+
+        .sponsorcontainer {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+            position: absolute;
+            top: 60px;
+        }
+
         p {
             text-align: center;
             font-size: 80px;
@@ -19,15 +32,21 @@
 
         }
 
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
+
             width: 100vw;
             height: 100vh;
-            background-image: url('./Blue\ BG.svg');
+            /* background-color: blue; */
+
+            vertical-align: middle;
             /* background-repeat: no-repeat; */
-            object-fit: cover;
+
+            /* object-fit: cover; */
+            /* background-color: blue; */
             overflow: hidden;
 
         }
@@ -54,25 +73,26 @@
 
         }
 
-        .logo {
+        /* .logo {
             position: absolute;
             top: 10%;
-        }
+        } */
 
         @media screen and (max-width: 768px) {
-            img {
+
+            .fg {
                 bottom: -50%;
             }
         }
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
-            img {
+            .fg {
                 bottom: -80%;
             }
         }
 
         @media screen and (max-width: 768px) {
-            img {
+            .fg {
                 bottom: -50%;
             }
         }
@@ -115,6 +135,32 @@
             justify-content: center;
             align-items: center;
         }
+
+        .timertext {
+            font-size: 30px;
+            font-family: 'Circular-Medium', sans-serif;
+        }
+
+        .timercontainer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .bg {
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -100;
+            position: absolute;
+            background-color: #C4F0FA;
+            transform: scale(1.5);
+            /* object-fit: cover; */
+
+        }
     </style>
 
 </head>
@@ -122,18 +168,32 @@
 <body>
 
     <!-- <p id="demo"></p> -->
-    <img class="logo" src="./Eth India Logo + Wordmark Black (1).svg" alt="" srcset="">
 
-    <div class="timecontainer">
-        <p class="timeinstance">
-        </p>
-        <p class="timeinstance">
-        </p>
-        <p class="timeinstance">
-        </p>
-        <p class="timeinstance">
-        </p>
+
+    <div class="sponsorcontainer">
+        <img src="./ethglobal-logo-name.e79de3ad.svg" alt="">
+        <img class="logo" src="./Eth India Logo + Wordmark Black (1).svg" alt="" srcset="">
+        <img src="./devfolio-logo.44696a43.svg" alt="">
     </div>
+
+
+    <div class="timercontainer">
+        <p class="timertext">T-minus</p>
+        <div class="timecontainer">
+            <p class="timeinstance">
+            </p>
+            <p class="timeinstance">
+            </p>
+            <p class="timeinstance">
+            </p>
+            <p class="timeinstance">
+            </p>
+        </div>
+        <p class="timertext">for submission</p>
+    </div>
+
+    <img src="./Blue BG.svg" alt="" class="bg">
+
     <img class="fg" src="./EthIndia Hero Backgrounf.png" alt="">
 
     <script>
