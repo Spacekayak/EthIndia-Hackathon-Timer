@@ -11,10 +11,10 @@
 
         p {
             text-align: center;
-            font-size: 60px;
+            font-size: 80px;
             margin-top: 0px;
             font-family: 'Fragile', sans-serif;
-            position: absolute;
+            /* position: absolute; */
 
 
         }
@@ -26,6 +26,8 @@
             width: 100vw;
             height: 100vh;
             background-image: url('./Blue\ BG.svg');
+            /* background-repeat: no-repeat; */
+            object-fit: cover;
             overflow: hidden;
 
         }
@@ -36,18 +38,43 @@
             box-sizing: border-box;
         }
 
-        img {
+
+        .fg {
             width: 100%;
-            height: 100%;
+
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0;
-            top: 40%;
-            object-fit: cover;
-            /* animation: rise 50s infinite linear; */
-            transform: scale(1.2);
+            bottom: -110%;
+            /* top: 20%; */
+            object-fit: contain;
+            text-align: center;
 
+            /* transform: scale(1.2); */
+
+        }
+
+        .logo {
+            position: absolute;
+            top: 10%;
+        }
+
+        @media screen and (max-width: 768px) {
+            img {
+                bottom: -50%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            img {
+                bottom: -80%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            img {
+                bottom: -50%;
+            }
         }
 
         @keyframes rise {
@@ -66,13 +93,48 @@
             }
 
         }
+
+        .timecontainer {
+            /* text-align: center; */
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        .timeinstance {
+            width: 250px;
+            height: 250px;
+            background-image: url('./EthIndia\ Startle.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
+
 </head>
 
 <body>
 
-    <p id="demo"></p>
-    <img src="./Section 2 Illustration1X.png" alt="">
+    <!-- <p id="demo"></p> -->
+    <img class="logo" src="./Eth India Logo + Wordmark Black (1).svg" alt="" srcset="">
+
+    <div class="timecontainer">
+        <p class="timeinstance">
+        </p>
+        <p class="timeinstance">
+        </p>
+        <p class="timeinstance">
+        </p>
+        <p class="timeinstance">
+        </p>
+    </div>
+    <img class="fg" src="./EthIndia Hero Backgrounf.png" alt="">
 
     <script>
         // Set the date we're counting down to
@@ -94,8 +156,13 @@
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Output the result in an element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
+            // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            //     + minutes + "m " + seconds + "s ";
+
+            document.getElementsByClassName("timeinstance")[0].innerHTML = days + "d";
+            document.getElementsByClassName("timeinstance")[1].innerHTML = hours + "h";
+            document.getElementsByClassName("timeinstance")[2].innerHTML = minutes + "m";
+            document.getElementsByClassName("timeinstance")[3].innerHTML = seconds + "s";
 
             // If the count down is over, write some text 
             if (distance < 0) {
