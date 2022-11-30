@@ -16,10 +16,18 @@
 
         .sponsorcontainer {
             display: flex;
+            row-gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            /* position: absolute; */
+            /* top: 60px; */
+        }
+
+        .subsponsorcontainer {
+            display: flex;
             column-gap: 20px;
             align-items: center;
-            position: absolute;
-            top: 60px;
+            margin-top: 100px;
         }
 
         p {
@@ -37,16 +45,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
 
             width: 100vw;
             height: 100vh;
-            /* background-color: blue; */
 
             vertical-align: middle;
-            /* background-repeat: no-repeat; */
-
-            /* object-fit: cover; */
-            /* background-color: blue; */
             overflow: hidden;
 
         }
@@ -137,7 +141,7 @@
         }
 
         .timertext {
-            font-size: 30px;
+            font-size: 45px;
             font-family: 'Circular-Medium', sans-serif;
         }
 
@@ -145,7 +149,9 @@
             display: flex;
             flex-direction: column;
             row-gap: 20px;
+            margin-top: 70px;
         }
+
 
         .bg {
             width: 100vw;
@@ -161,6 +167,10 @@
             /* object-fit: cover; */
 
         }
+
+        .logo {
+            width: 180px;
+        }
     </style>
 
 </head>
@@ -171,9 +181,10 @@
 
 
     <div class="sponsorcontainer">
-        <img src="./ethglobal-logo-name.e79de3ad.svg" alt="">
+
         <img class="logo" src="./Eth India Logo + Wordmark Black (1).svg" alt="" srcset="">
-        <img src="./devfolio-logo.44696a43.svg" alt="">
+
+
     </div>
 
 
@@ -190,6 +201,11 @@
             </p>
         </div>
         <p class="timertext">for submission</p>
+    </div>
+
+    <div class="subsponsorcontainer">
+        <img src="./ethglobal-logo-name.e79de3ad.svg" alt="">
+        <img src="./devfolio-logo.44696a43.svg" alt="">
     </div>
 
     <img src="./Blue BG.svg" alt="" class="bg">
