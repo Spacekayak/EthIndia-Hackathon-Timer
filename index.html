@@ -268,6 +268,7 @@
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("Dec 4, 2022 9:00:00").getTime();
+        //var countDownDate = new Date("Dec 1, 2022 17:20:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
@@ -303,8 +304,24 @@
             // If the count down is over, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementsByClassName("timeinstance")[0].innerHTML = "W";
+                // document.getElementsByClassName("star")[0].style.transform = "rotate(" + -seconds * 10 + "deg)";
+
+                document.getElementsByClassName("timeinstance")[1].innerHTML = "R";
+                // document.getElementsByClassName("star")[1].style.transform = "rotate(" + -seconds * 10 + "deg)";
+
+                document.getElementsByClassName("timeinstance")[2].innerHTML = "A";
+                // document.getElementsByClassName("star")[2].style.transform = "rotate(" + -seconds * 10 + "deg)";
+
+                document.getElementsByClassName("timeinstance")[3].innerHTML = "P";
+                document.getElementsByClassName("timertext")[0].innerHTML = "that's a";
             }
+
+            if (distance > 0 && distance <= 3) {
+
+                document.getElementsByClassName("timertext")[0].innerHTML = "and...";
+            }
+
         }, 1000);
     </script>
 
