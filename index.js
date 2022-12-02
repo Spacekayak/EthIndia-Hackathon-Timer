@@ -1,5 +1,5 @@
 var x;
-var override = false;
+var override = true;
 var countdownDate;
 var end = false;
 
