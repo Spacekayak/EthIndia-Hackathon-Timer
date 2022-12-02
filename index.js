@@ -1,9 +1,9 @@
 var x;
-var override = true;
+var override = false;
 var countdownDate;
 
 if (override) {
-	countdownDate = new Date("Dec 2, 2022 15:00:00").getTime();
+	countdownDate = new Date("Dec 4, 2022 9:00:00").getTime();
 	//countdownDate = new Date("Dec 1, 2022 15:19:00").getTime();
 	//alert(countdownDate);
 	secondState();
