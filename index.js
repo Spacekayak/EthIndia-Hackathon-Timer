@@ -1,6 +1,7 @@
 var x;
 var override = false;
 var countdownDate;
+var end = false;
 
 if (override) {
 	countdownDate = new Date("Dec 4, 2022 9:00:00").getTime();
@@ -48,12 +49,16 @@ function timerFunction() {
 	// document.getElementsByClassName("star")[2].style.transform = "rotate(" + -seconds * 10 + "deg)";
 
 	document.getElementsByClassName("timeinstance")[2].innerHTML = seconds + "s";
-	document.getElementsByClassName("star")[2].style.transform =
-		"rotate(" + -seconds * 10 + "deg)";
+	if (!end)
+		document.getElementsByClassName("star")[2].style.transform =
+			"rotate(" + -seconds * 10 + "deg)";
+	else
+		document.getElementsByClassName("star")[2].style.transform = "rotate(0deg)";
 
 	// If the count down is over, write some text
 	if (distance < 0) {
 		clearInterval(x);
+		end = true;
 		document.getElementsByClassName("timeinstance")[0].innerHTML = "F";
 		// document.getElementsByClassName("star")[0].style.transform = "rotate(" + -seconds * 10 + "deg)";
 
@@ -65,13 +70,15 @@ function timerFunction() {
 
 		// document.getElementsByClassName("timeinstance")[3].innerHTML = "P";
 		document.getElementsByClassName("timertext")[0].innerHTML =
-			"Thanks for hacking!";
+			"And... that's a hack!";
 	}
 }
 
 function startCountdown() {
 	var startTime;
 	var current = localStorage["startTime"];
+	document.getElementsByClassName("timertext")[0].innerHTML =
+		"Time to <br> Submission";
 	if (current == undefined) {
 		startTime = Date.now();
 

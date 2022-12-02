@@ -23,7 +23,7 @@
 
 p {
 	text-align: center;
-	font-size: 64px;
+	font-size: calc(40px + 1vw);
 	margin-top: 0px;
 	font-family: "Fragile", sans-serif;
 	/* position: absolute; */
@@ -78,33 +78,6 @@ body {
 	}
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	.fg {
-		bottom: -80%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.fg {
-		bottom: -50%;
-	}
-}
-
-@keyframes rise {
-	0% {
-		top: 40%;
-	}
-
-	50% {
-		top: 42%;
-		transform: scale(1);
-	}
-
-	100% {
-		top: 40%;
-	}
-}
-
 .timecontainer {
 	/* text-align: center; */
 	display: flex;
@@ -112,7 +85,7 @@ body {
 	/* height: 100%; */
 	justify-content: center;
 	align-items: center;
-	column-gap: 20px;
+	column-gap: 30px;
 	display: none;
 	color: black;
 }
@@ -139,9 +112,9 @@ body {
 }
 
 .timertext {
-	font-size: 80px;
+	font-size: calc(60px + 1vw);
 	font-family: "Fragile", sans-serif;
-	display: none;
+	/* display: none; */
 }
 
 .kiteleft {
@@ -195,11 +168,11 @@ body {
 
 	font-family: Circular Std, sans-serif;
 	color: white;
-	font-weight: 500;
-	font-size: 20px;
+	font-weight: 700;
+	font-size: 44px;
 	line-height: 40px;
 	letter-spacing: 0.02em;
-	padding: 8px 24px;
+	padding: 24px 64px;
 	border-radius: 12px;
 	background-color: #ff3494;
 	box-shadow: 4px 4px 0 0 var(--box-shadow-color);
@@ -207,6 +180,7 @@ body {
 
 .spacer {
 	height: 100px;
+	display: none;
 }
 
 img {
