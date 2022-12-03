@@ -187,3 +187,17 @@ img {
 	user-select: none;
 	pointer-events: none;
 }
+
+.timeinstancestar {
+	animation: appear 1s;
+	transition-duration: 1s;
+}
+
+@keyframes appear {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

@@ -5,7 +5,7 @@ var end = false;
 
 if (override) {
 	countdownDate = new Date("Dec 4, 2022 9:00:00").getTime();
-	//countdownDate = new Date("Dec 1, 2022 15:19:00").getTime();
+	// countdownDate = new Date("Dec 4, 2022 1:56:00").getTime();
 	//alert(countdownDate);
 	secondState();
 }
@@ -59,24 +59,28 @@ function timerFunction() {
 	if (distance < 0) {
 		clearInterval(x);
 		end = true;
-		document.getElementsByClassName("timeinstance")[0].innerHTML = "F";
+
+		document.getElementsByClassName("timeinstance")[0].innerHTML = "W";
 		// document.getElementsByClassName("star")[0].style.transform = "rotate(" + -seconds * 10 + "deg)";
 
-		document.getElementsByClassName("timeinstance")[1].innerHTML = "I";
+		document.getElementsByClassName("timeinstance")[1].innerHTML = "R";
 		// document.getElementsByClassName("star")[1].style.transform = "rotate(" + -seconds * 10 + "deg)";
 
-		document.getElementsByClassName("timeinstance")[2].innerHTML = "N";
+		document.getElementsByClassName("timeinstance")[2].innerHTML = "A";
 		// document.getElementsByClassName("star")[2].style.transform = "rotate(" + -seconds * 10 + "deg)";
 
-		// document.getElementsByClassName("timeinstance")[3].innerHTML = "P";
+		document.getElementsByClassName("timeinstancestar")[3].style.display =
+			"block";
+		document.getElementsByClassName("timeinstance")[3].innerHTML = "P";
 		document.getElementsByClassName("timertext")[0].innerHTML =
-			"And... that's a hack!";
+			"And... that's a";
 	}
 }
 
 function startCountdown() {
 	var startTime;
 	var current = localStorage["startTime"];
+
 	document.getElementsByClassName("timertext")[0].innerHTML =
 		"Time to <br> Submission";
 	if (current == undefined) {
@@ -100,5 +104,6 @@ function secondState() {
 	document.getElementsByClassName("timertext")[0].style.display = "block";
 	document.getElementsByClassName("timertext")[0].style.display = "block";
 	document.getElementsByClassName("timecontainer")[0].style.display = "flex";
+	document.getElementsByClassName("timeinstancestar")[3].style.display = "none";
 	setInterval(timerFunction, 1000);
 }
